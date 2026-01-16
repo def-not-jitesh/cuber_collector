@@ -7,6 +7,10 @@ public class PlayerCollision : MonoBehaviour {
 		if (collisionInfo.collider.tag == "collectable") {
 			Debug.Log("we ate a collectable");
 			Destroy(collisionInfo.gameObject);
+		} 
+
+		if (collisionInfo.collider.tag == "obstacle") {
+			Debug.Log("game over");
 		}
 	}
 }
